@@ -1,0 +1,76 @@
+html{
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(156,190,214,1) 100%);  
+}
+
+.container {
+  width: 700px;
+  margin: 50px auto;
+  padding: 10px 30px 10px 20px; 
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.container table{
+  width: 700px;
+  height: 300px;
+  
+}
+
+.container table td {
+  text-align: right;
+  font-size: 18px;
+}
+
+.container table tr th{
+  height: 40px;
+  text-align: right;
+  color:rgb(121, 116, 116);
+}
+
+.weatherNowImage {
+  width: 280px;
+  
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.weatherNowImage#clearDay{
+  background-image: url('/public/images/맑음_낮.svg');
+}
+
+.weatherNowImage#clearNight{
+  background-image: url('/public/images/맑음_밤.svg');
+}
+
+.weatherNowImage#cloudyDay{
+  background-image: url('/public/images/구름많음_낮.svg');
+}
+
+.weatherNowImage#cloudyNight{
+  background-image: url('/public/images/구름많음_밤.svg');
+}
+
+.weatherNowImage#overcast{
+  background-image: url('/public/images/흐림.svg');
+}
+
+
+.currentTemperature {
+  height: 150px;
+}
+
+.currentTemperature strong {
+  font-size: 130px;
+}
+
+.currentTemperature span {
+  font-size: 60px;
+  color:black;
+}
+
+.currentInfo {
+  height: 50px;
+}
