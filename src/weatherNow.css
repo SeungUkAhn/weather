@@ -19,7 +19,6 @@ html{
 }
 
 .container table td {
-  text-align: right;
   font-size: 18px;
 }
 
@@ -57,6 +56,29 @@ html{
   background-image: url('/public/images/흐림.svg');
 }
 
+.weatherNowImage#rainy{
+  background-image: url('/public/images/비.svg');
+}
+
+.weatherNowImage#rainSnow{
+  background-image: url('/public/images/진눈개비.svg');
+}
+
+.weatherNowImage#snow{
+  background-image: url('/public/images/눈.svg');
+}
+
+.weatherNowImage#raindrop{
+  background-image: url('/public/images/비.svg');
+}
+
+.weatherNowImage#raindropSnow{
+  background-image: url('/public/images/빗방울눈날림.svg');
+}
+
+.weatherNowImage#heavySnow{
+  background-image: url('/public/images/소낙눈.svg');
+}
 
 .currentTemperature {
   height: 150px;
@@ -66,8 +88,12 @@ html{
   font-size: 130px;
 }
 
-.currentTemperature span {
-  font-size: 60px;
+.currentStatus {
+  padding-top: 50px;
+}
+
+.currentStatus span {
+  font-size: 35px;
   color:black;
 }
 
