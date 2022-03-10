@@ -8,6 +8,8 @@ function App() {
 
   const [weatherNow, setWeatherNow] = useState({baseDate: "-", baseTime: "-", pty: "-", reh: "-", rn1: "-", t1H: "-", uuu: "-", vec: "-", vvv: "-", wsd: "-", sky: "-"});
 
+  const [shortTermForecast, setShortTermForecast] = useState([]);
+
   useEffect(()=>{
 
     axios.get('http://localhost:8080/api/currentweather')
@@ -16,7 +18,7 @@ function App() {
 
 
     axios.get('http://localhost:8080/api/shorttermweather')
-    .then((result)=>{ console.log(result.data)})
+    .then((result)=>{ setShortTermForecast(result.data); console.log(result.data)})
     .catch(()=>{ console.log("통신실패"); })
     
   }, [])
@@ -26,7 +28,7 @@ function App() {
     <div className="App">
       
        <WeatherNow weatherNow = {weatherNow}/>
-       <WeatherForecast />
+       <ShortTermForecast shortTermForecast = {shortTermForecast}/>
     </div>
   );
 }
@@ -35,6 +37,7 @@ function WeatherNow(props){
 
   //하늘 상태에 따라 날씨 이미지 변경
   let sky = {맑음 : "clearDay", 구름많음 : "cloudyDay", 흐림 : "overcast"};
+  let pty = {비 : "rainy", "비/눈" : "rainSnow", 눈 : "snow", 빗방울 : "raindrop", 빗방울눈날림 : "raindropSnow", 눈날림 : "heavySnow"};
   
   return(
 
@@ -43,13 +46,15 @@ function WeatherNow(props){
         <table>
           <tbody>
             <tr>
-              <td rowSpan="3" className="weatherNowImage" id={sky[props.weatherNow.sky]}></td>
+              <td rowSpan="3" className="weatherNowImage" id={(props.weatherNow.pty != '없음') ? pty[props.weatherNow.pty] : sky[props.weatherNow.sky]}></td>
               <th colSpan="3">{props.weatherNow.baseDate} {props.weatherNow.baseTime}</th>
             </tr>
             <tr>
               
-              <td colSpan="3" className="currentTemperature">
+              <td colSpan="2" className="currentTemperature">
                 <strong>&nbsp;{props.weatherNow.t1H}</strong>
+              </td>
+              <td className="currentStatus">
                 <span>
                   {
                     (props.weatherNow.pty != '없음') ? props.weatherNow.pty : props.weatherNow.sky
@@ -71,12 +76,12 @@ function WeatherNow(props){
   )
 }
 
-function WeatherForecast(){
+function ShortTermForecast(){
 
     return(
      <div className="container">
       변경사항 적용되는지 테스트
-
+          
     </div>
     )
 }
