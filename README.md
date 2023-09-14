@@ -5,8 +5,8 @@
 # 기능
 - API호출을 통한 현재 날씨, 단기 예보 화면 출력 (중기 예보 작업 중)
 
-# 화면 예시
-- <img src="https://github.com/SeungUkAhn/weatherNow-front-end/assets/12409002/c495fb98-5482-433f-a37d-979df8815078" width="600" height="auto">
+# 단기 예보 화면
+<img src="https://github.com/SeungUkAhn/weatherNow-front-end/assets/12409002/c495fb98-5482-433f-a37d-979df8815078" width="600" height="auto">
 
 # Note
 - BE 레포지토리: https://github.com/SeungUkAhn/weatherNow-back-end/
