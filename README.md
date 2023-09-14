@@ -5,7 +5,7 @@
 # 기능
 - API호출을 통한 현재 날씨, 단기 예보 화면 출력 (중기 예보 작업 중)
 
-# 단기 예보 화면
+# 스크린샷(단기 예보)
 <img src="https://github.com/SeungUkAhn/weatherNow-front-end/assets/12409002/c495fb98-5482-433f-a37d-979df8815078" width="600" height="auto">
 
 # Note
